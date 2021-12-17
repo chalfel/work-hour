@@ -21,7 +21,7 @@ const Home: NextPage = () => {
   }
   return (
     <main className="w-screen h-screen flex flex-col items-center justify-center">
-      <p className="font-black text-8xl">Work Hour</p>
+      <p className="font-black text-6xl lg:text-8xl">Work Hour</p>
       <form className="flex flex-col p-5 items-center justify-start">
         <p className="text-2xl text-neutral-500 font-normal">Resultado </p>
         <p className="text-3xl font-bold mb-4"> {totalTime} </p>
