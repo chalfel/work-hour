@@ -21,17 +21,19 @@ const Home: NextPage = () => {
   }
   return (
     <main className="w-screen h-screen flex flex-col items-center justify-center">
-      <form className="flex flex-col p-5">
-        <label>Hora da Entrada</label>
-        <input value={enterTime} onChange={(e) => setEnterTime(e.target.value)}></input>
-        <label htmlFor="lunch">Hora do Almoço</label>
-        <input id="lunch" value={lunchTime} onChange={(e) => setLunchTime(e.target.value)}></input>
-        <label htmlFor="goBack">Hora da Volta</label>
-        <input id="goBack" value={goBackTime} onChange={(e) => setGoBackTime(e.target.value)}></input>
-        <label htmlFor="leave">Hora da Saida</label>
-        <input id="leave" value={leaveTime} onChange={(e) => setLeaveTime(e.target.value)}></input>
-        <button onClick={handleCalculateTime} type="button">Calcular</button>
-        <p> {totalTime} </p>
+      <p className="font-black text-8xl">Work Hour</p>
+      <form className="flex flex-col p-5 items-center justify-start">
+        <p className="text-2xl text-neutral-500 font-normal">Resultado </p>
+        <p className="text-3xl font-bold mb-4"> {totalTime} </p>
+        <label className="text-neutral-500">Hora da Entrada</label>
+        <input className="text-center" type="time" value={enterTime} onChange={(e) => setEnterTime(e.target.value)}></input>
+        <label className="text-neutral-500" htmlFor="lunch">Hora do Almoço</label>
+        <input className="text-center" id="lunch" type="time" value={lunchTime} onChange={(e) => setLunchTime(e.target.value)}></input>
+        <label className="text-neutral-500" htmlFor="goBack">Hora da Volta</label>
+        <input className="text-center" id="goBack" type="time" value={goBackTime} onChange={(e) => setGoBackTime(e.target.value)}></input>
+        <label className="text-neutral-500"htmlFor="leave">Hora da Saida</label>
+        <input  className="text-center" id="leave" type="time" value={leaveTime} onChange={(e) => setLeaveTime(e.target.value)}></input>
+        <button onClick={handleCalculateTime} type="button" className="bg-black text-white px-4 py-2 rounded-xl my-2">Calcular</button>
       </form>
     </main>
   )
