@@ -94,7 +94,7 @@ const Home: NextPage = () => {
         return {
           ...item,
           [type]: {
-            ...item[type],
+            ...(item as any)[type],
             value,
           }
         }
